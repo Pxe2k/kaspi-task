@@ -1,4 +1,4 @@
-package delivery
+package person
 
 import (
 	"fmt"

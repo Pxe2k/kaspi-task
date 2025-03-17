@@ -1,12 +1,12 @@
-package usecase
+package person
 
 import (
 	"context"
-	"github.com/Pxe2k/kaspi-task/internal/delivery"
+	"github.com/Pxe2k/kaspi-task/internal/delivery/person"
 	"github.com/Pxe2k/kaspi-task/internal/domain"
 )
 
-func (u UseCase) Store(ctx context.Context, req delivery.StoreRequest) error {
+func (u UseCase) Store(ctx context.Context, req person.StoreRequest) error {
 	return u.repository.Store(ctx, domain.Person{
 		DocumentID: req.DocumentID,
 		Name:       req.Name,

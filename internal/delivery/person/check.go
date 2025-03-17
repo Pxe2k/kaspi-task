@@ -1,4 +1,4 @@
-package delivery
+package person
 
 import (
 	"github.com/Pxe2k/kaspi-task/pkg"

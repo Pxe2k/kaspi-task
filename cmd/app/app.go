@@ -3,9 +3,9 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/Pxe2k/kaspi-task/internal/delivery"
+	"github.com/Pxe2k/kaspi-task/internal/delivery/person"
 	"github.com/Pxe2k/kaspi-task/internal/repository"
-	"github.com/Pxe2k/kaspi-task/internal/usecase"
+	person2 "github.com/Pxe2k/kaspi-task/internal/usecase/person"
 	"github.com/Pxe2k/kaspi-task/pkg"
 	"log"
 	"net/http"
@@ -25,8 +25,8 @@ func main() {
 
 	srv := http.Server{
 		Addr: fmt.Sprint(":", os.Getenv("PORT")),
-		Handler: delivery.New(
-			usecase.New(
+		Handler: person.New(
+			person2.New(
 				repository.New(pg),
 			),
 		),

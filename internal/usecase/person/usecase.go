@@ -1,4 +1,4 @@
-package usecase
+package person
 
 type UseCase struct {
 	repository repository
